@@ -11,13 +11,42 @@
 
 
 
+
+
+//Вывод элементов массива на экран через запятую
+void PrintArray(string[] arr) {
+	System.Console.WriteLine("[" + string.Join(",", arr) + "]");
+}
+
+
+string[] CreateArrayNoMoreThenThreeChar(string[] inputArray){
+
+    int lengthResultArray = 0;
+    int index = 0;
+    
+    //Проходим по массиву переданному в параметры и инкрементируем переменную длины для результирующего массива
+    for (int i = 0; i < inputArray.Length; i++) {
+        if(inputArray[i].Length <= 3) {
+            lengthResultArray++;
+        }
+    }
+
+    //Создаём результирующий массив и заполняем его
+    string[] resultArray = new string[lengthResultArray];
+    for (int i = 0; i < inputArray.Length; i++) {
+        if(inputArray[i].Length <= 3) {
+            resultArray[index++] = inputArray[i];
+            
+        }
+    }
+    return resultArray;
+}
+
 System.Console.Write("Введите слова строго через запятую и без пробелов: ");
 
+//Сохраняем строку из консоли и создаём из неё массив.
 string? inputString = System.Console.ReadLine();
 string[] parseArray = inputString.Split(",");
 
-//Метод принимает в себя массив, выбирает из него элементы которые содержат не более 3 символов, 
-//добавляет их в новый массив и возвращает его.
-string[] CreateArrayNoMoreThenThreeChar(string[] inputArray){
-    
-}
+string[] result = CreateArrayNoMoreThenThreeChar(parseArray);
+PrintArray(result);
