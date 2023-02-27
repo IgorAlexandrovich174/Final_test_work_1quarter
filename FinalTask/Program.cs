@@ -9,10 +9,12 @@
 //[“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 //[“Russia”, “Denmark”, “Kazan”] → []
 
-string[] firstArray = {"Hello", "2", "world", ":-)"};
-string[] secondArray = {"1234", "1567", "-2","computer science"};
-string[] thirdArray = {"Russia", "Denmark", "Kazan"};
 
+
+System.Console.Write("Введите слова строго через запятую и без пробелов: ");
+
+string? inputString = System.Console.ReadLine();
+string[] parseArray = inputString.Split(",");
 
 //Метод принимает в себя массив, выбирает из него элементы которые содержат не более 3 символов, 
 //добавляет их в новый массив и возвращает его.
