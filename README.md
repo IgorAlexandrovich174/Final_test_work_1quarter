@@ -74,3 +74,6 @@ PrintArray(result);
 ```
 ## Результат ввода и вывода в терминал
 > ![result_in_terminal](result-terminal.png)
+
+## Скриншоты коммитов
+> ![Commits](Commits.png)
